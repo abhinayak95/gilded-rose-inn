@@ -1,5 +1,5 @@
 class Item
-  attr_accessor :type, :sell_in, :quality
+  att_reader :type, :sell_in, :quality
 
   def initialize(type, sell_in, quality)
     @type = type
@@ -9,6 +9,7 @@ class Item
 
   def update
     @sell_in -= 1
-    @quality -= 1
+    @quality -= 2 if @sell_in == -1
+    @quality -= 1 if @sell_in != -1
   end
 end
