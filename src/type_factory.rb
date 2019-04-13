@@ -5,6 +5,8 @@ class TypeFactory
     case type
     when 'Aged Brie'
       AgedBrie.new
+    when 'Sulfuras'
+
     else
       BasicType.new
     end
