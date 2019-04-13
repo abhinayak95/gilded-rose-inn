@@ -1,14 +1,17 @@
 class SellIn
 
+  attr_reader :value
+
   def initialize(value)
     @value = value
   end
 
-  def degrade_by(value)
-    @value -= value
+  def reduce
+    @value -= 1
   end
 
   def ==(other)
     @value == other
   end
+
 end

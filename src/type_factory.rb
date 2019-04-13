@@ -1,14 +1,16 @@
-require_relative './basic_type'
+require_relative './basic'
 
 class TypeFactory
   def self.get(type)
     case type
-    when 'Aged Brie'
-      AgedBrie.new
-    when 'Sulfuras'
-
+    when :aged
+      Aged.new
+    when :conjured
+      Conjured.new
+    when :legendary
+      Legendary.new
     else
-      BasicType.new
+      Basic.new
     end
   end
 end
