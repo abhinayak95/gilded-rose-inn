@@ -1,10 +1,11 @@
 class Quality
 
   def initialize(value)
-    @value = value
+    @value = value if value <= 50
+    @value = 50 if value > 50
   end
 
-  def downgrade_by(value)
+  def degrade_by(value)
     @value -= value
   end
 

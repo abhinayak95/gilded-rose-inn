@@ -4,7 +4,7 @@ class SellIn
     @value = value
   end
 
-  def downgrade_by(value)
+  def degrade_by(value)
     @value -= value
   end
 

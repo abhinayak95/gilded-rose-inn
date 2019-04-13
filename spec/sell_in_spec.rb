@@ -7,7 +7,7 @@ RSpec.describe SellIn do
 
   it 'should be able to reduce the sell_in value' do
     sell_in = SellIn.new(10)
-    sell_in.downgrade_by(5)
+    sell_in.degrade_by(5)
     expect(sell_in).to eq(5)
   end
 end

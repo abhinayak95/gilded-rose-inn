@@ -7,7 +7,11 @@ RSpec.describe Quality do
 
   it 'should be able to reduce the quality value' do
     quality = SellIn.new(10)
-    quality.downgrade_by(5)
+    quality.degrade_by(5)
     expect(quality).to eq(5)
+  end
+
+  it 'should not be more than 50' do
+    expect(Quality.new(51)).to eq(50)
   end
 end
