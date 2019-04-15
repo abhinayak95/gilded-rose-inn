@@ -1,5 +1,5 @@
 class SellIn
-
+  include Comparable
   attr_reader :value
 
   def initialize(value)
@@ -10,8 +10,8 @@ class SellIn
     @value -= 1
   end
 
-  def ==(other)
-    @value == other
+  def <=>(other)
+    @value <=> other
   end
 
 end

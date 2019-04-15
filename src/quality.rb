@@ -1,5 +1,5 @@
 class Quality
-
+  include Comparable
   attr_accessor :value
 
   def initialize(value)
@@ -14,8 +14,8 @@ class Quality
     set(@value + value)
   end
 
-  def ==(other)
-    @value == other
+  def <=>(other)
+    @value <=> other
   end
 
   private
